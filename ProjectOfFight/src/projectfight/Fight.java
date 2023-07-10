@@ -5,7 +5,4 @@ public class Fight{
    // private challenged;
     private int rounds;
     private boolean approved;
-    
-    
-    
 }
