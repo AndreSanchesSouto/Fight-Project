@@ -22,3 +22,8 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+*.xml
+ProjectOfFight/build/classes/.netbeans_automatic_build
+ProjectOfFight/build/classes/.netbeans_update_resources
+*.properties
+ProjectOfFight/manifest.mf
