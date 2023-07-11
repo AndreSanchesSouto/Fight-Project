@@ -24,7 +24,7 @@ public class Fighter{
         setDefeats(getDefeats() + 1);
     }
     
-    public void drawFight(){
+    public void tieFight(){
         setTies(getTies() + 1);
     }
     
