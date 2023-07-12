@@ -3,8 +3,7 @@ package projectfight;
 import java.util.Random;
 
 public class Fight{
-    private Fighter challenger ;
-    private Fighter challenged;
+    private Fighter challenger, challenged, champ;
     private int rounds;
     private boolean approved;
     
@@ -28,6 +27,8 @@ public class Fight{
             System.out.println("\n--The challenged--");
             challenged.introduce();
             
+            winner(challenger, challenged);
+
             Random ran = new Random();
             int champ = ran.nextInt(3);
             
@@ -52,6 +53,13 @@ public class Fight{
         }else{
             System.out.println("The fight cannot happen...");
         }
+    }
+
+    private Fighter winner(Fighter f1, Fighter f2){
+        if(f1.getAge() > f2.getAge()){
+
+        }
+        return champ;
     }
 
     public Fighter getChallenger(){
