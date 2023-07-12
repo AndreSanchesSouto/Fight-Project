@@ -17,21 +17,21 @@ public class ProjectFight{
         
         f[5] = new Fighter("Nerdaart", "USA", 30, 12, 2, 4, 1.81f, 105.7f);
         
-        Fight UCC[] = new Fight[3];
+        Fight UCC = new Fight();
         
-        UCC[0].markFight(f[0], f[1]);
-        UCC[0].setRounds(100);
-        UCC[0].fight();
+        UCC.markFight(f[0], f[1]);
+        UCC.setRounds(100);
+        UCC.fight();
         f[0].status();
         f[1].status();
         
-        UCC[1].markFight(f[2], f[3]);
-        UCC[1].fight();
+        UCC.markFight(f[2], f[3]);
+        UCC.fight();
         f[2].status();
         f[3].status();
         
-        UCC[2].markFight(f[4], f[5]);
-        UCC[2].fight();
+        UCC.markFight(f[4], f[5]);
+        UCC.fight();
         f[4].status();
         f[5].status();
         

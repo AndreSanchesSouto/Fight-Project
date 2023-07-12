@@ -84,7 +84,11 @@ public class Fight{
         }
         return champ.getName();
     }
-
+    
+    public Fight(){
+        this.rounds = 1;
+    }
+    
     public Fighter getChallenger(){
         return this.challenger;
     }
