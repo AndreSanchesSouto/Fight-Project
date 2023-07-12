@@ -22,12 +22,12 @@ public class Fight{
     
     public void fight(){
         if(getApproved()){
-            System.out.println("--The challenger--");
+            System.out.println("\n--The challenger--");
             challenger.introduce();
             System.out.println("\n--The challenged--");
             challenged.introduce();
             
-            System.out.println("WE HAS A CHAMP --" + winner(challenger, challenged) + "--");
+            System.out.println("\nWE HAS A CHAMP --" + winner(challenger, challenged) + "--\n");
             
         }else{
             System.out.println("The fight cannot happen...");
