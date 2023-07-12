@@ -36,32 +36,37 @@ public class Fight{
 
     private String winner(Fighter f1, Fighter f2){
         Random ran = new Random();
-        int prob1 = 0, prob2 = 0, luck;
+        int prob = 50, luck, point1=0, point2=0;
 
         if(f1.getAge() > f2.getAge()){
-            prob1+=10;
-
+            prob+=10;
+            point1++;
         }else if(f1.getAge() < f2.getAge()){
-            prob2+=10;
+            prob-=10;
+            point2++;
         }
-
+        
         if(f1.getHeight() > f2.getHeight()){
-            prob1+=10;
+            prob+=10;
+            point1++;
+        }else if(f1.getHeight() < f2.getHeight()){
+            prob-=10;
+            point2++;
+        }
+        
+        if(f1.getWeight() > f2.getWeight()){
+            prob+=10;
+            point1++;
 
         }else if(f1.getHeight() < f2.getHeight()){
-            prob2+=10;
+            prob-=10;
+            point2++;
         }
-
-        if(f1.getWeight() > f2.getWeight()){
-            prob1+=10;
-
-        }else if(f1.getWeight() < f2.getHeight()){
-            prob2+=10;
-        }
-
+        
         luck = ran.nextInt(101);
-
-        if(prob1 > prob2 && luck <= prob1){
+        System.out.println("------\n" + luck+"\n"+prob+"\n------");
+        luck=40;
+        if(luck<=prob){
             champ = f1;
         }else{
             champ = f2;
