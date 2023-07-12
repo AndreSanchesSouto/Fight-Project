@@ -36,37 +36,57 @@ public class Fight{
 
     private String winner(Fighter f1, Fighter f2){
         Random ran = new Random();
-        int prob = 50, luck;
-
-        if(f1.getAge() > f2.getAge()){
-            prob+=10;
+        
+        int champTimeF1=0, champTimeF2=0;
+        int t1=0,t2=0;
+        
+        for(int n=0; n<getRounds(); n++){
+            int prob = 50, luck;
             
-        }else if(f1.getAge() < f2.getAge()){
-            prob-=10;
-        }
-        
-        if(f1.getHeight() > f2.getHeight()){
-            prob+=10;
-           
-        }else if(f1.getHeight() < f2.getHeight()){
-            prob-=10;
-        }
-        
-        if(f1.getWeight() > f2.getWeight()){
-            prob+=10;
+            if(f1.getAge() > f2.getAge()){
+                prob+=10;
 
-        }else if(f1.getHeight() < f2.getHeight()){
-            prob-=10;
+            }else if(f1.getAge() < f2.getAge()){
+                prob-=10;
+            }
+
+            if(f1.getHeight() > f2.getHeight()){
+                prob+=10;
+
+            }else if(f1.getHeight() < f2.getHeight()){
+                prob-=10;
+            }
+
+            if(f1.getWeight() > f2.getWeight()){
+                prob+=10;
+
+            }else if(f1.getHeight() < f2.getHeight()){
+                prob-=10;
+            }
+            System.out.println("\nProb:"+prob);
+            luck = ran.nextInt(101);
+            System.out.println("luck:"+luck);
+            if(luck<=prob){
+                t1++;
+                System.out.print("F1 ");
+                champTimeF1++;
+                
+            }else{
+                t2++;
+                System.out.print("F2 ");
+                champTimeF2++;
+            }
         }
-        
-        luck = ran.nextInt(101);
-        
-        if(luck<=prob){
-            champ = f1;
+        System.out.println("\n1:"+champTimeF1+"\n2:"+champTimeF2+"\n");
+        if(champTimeF1>champTimeF2){
+             champ = f1;
+             f1.setVictories(f1.getVictories()+1);
+             f2.setDefeats(f2.getDefeats()+1);
         }else{
             champ = f2;
+            f2.setVictories(f2.getVictories()+1);
+            f1.setDefeats(f1.getDefeats()+1);
         }
-
         return champ.getName();
     }
 
@@ -90,8 +110,8 @@ public class Fight{
         return this.rounds;
     }
 
-    public void setRounds(int rnd){
-        this.rounds = rnd;
+    public void setRounds(int rnds){
+        this.rounds = rnds;
     }
 
     public boolean getApproved(){
