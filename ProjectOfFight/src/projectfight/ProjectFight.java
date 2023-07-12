@@ -3,9 +3,10 @@ package projectfight;
 public class ProjectFight{
 
     public static void main(String[] args){
-        int x=6;
-        
-        Fighter f[] = new Fighter[x];
+        int fighters = 7;
+        int fights = 4;
+                
+        Fighter f[] = new Fighter[fighters];
         
         f[0] = new Fighter("Pretty Boy", "France", 31, 11, 3, 1, 1.75f, 68.9f);
         
@@ -19,8 +20,10 @@ public class ProjectFight{
         
         f[5] = new Fighter("Nerdaart", "USA", 30, 12, 2, 4, 1.81f, 105.7f);
         
+        f[6] = new Fighter("The Master", "Japan", 50, 40, 0, 0, 2.10f, 98.5f);
         
-        Fight UCC[] = new Fight[x/2];
+        
+        Fight UCC[] = new Fight[fights];
         
         UCC[0] = new Fight();
         UCC[0].markFight(f[0], f[1]);
@@ -42,6 +45,12 @@ public class ProjectFight{
         f[4].status();
         f[5].status();
         
+        UCC[3] = new Fight();
+        UCC[3].markFight(f[5], f[6]);
+        UCC[3].setRounds(5000);
+        UCC[3].fight();
+        f[5].status();
+        f[6].status();
     }
     
 }
