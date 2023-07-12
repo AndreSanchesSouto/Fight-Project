@@ -20,7 +20,7 @@ public class ProjectFight{
         Fight UCC = new Fight();
         
         UCC.markFight(f[0], f[1]);
-        UCC.setRounds(10);
+        UCC.setRounds(100);
         UCC.fight();
         f[0].status();
         f[1].status();
