@@ -3,7 +3,9 @@ package projectfight;
 public class ProjectFight{
 
     public static void main(String[] args){
-        Fighter f[] = new Fighter[6];
+        int x=6;
+        
+        Fighter f[] = new Fighter[x];
         
         f[0] = new Fighter("Pretty Boy", "France", 31, 11, 3, 1, 1.75f, 68.9f);
         
@@ -18,7 +20,7 @@ public class ProjectFight{
         f[5] = new Fighter("Nerdaart", "USA", 30, 12, 2, 4, 1.81f, 105.7f);
         
         
-        Fight UCC[] = new Fight[3];
+        Fight UCC[] = new Fight[x/2];
         
         UCC[0] = new Fight();
         UCC[0].markFight(f[0], f[1]);
