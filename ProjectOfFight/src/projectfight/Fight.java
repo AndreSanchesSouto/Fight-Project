@@ -38,7 +38,6 @@ public class Fight{
         Random ran = new Random();
         
         int champTimeF1=0, champTimeF2=0;
-        int t1=0,t2=0;
         
         for(int n=0; n<getRounds(); n++){
             int prob = 50, luck;
@@ -63,17 +62,13 @@ public class Fight{
             }else if(f1.getHeight() < f2.getHeight()){
                 prob-=10;
             }
-            System.out.println("\nProb:"+prob);
+          
             luck = ran.nextInt(101);
-            System.out.println("luck:"+luck);
+          
             if(luck<=prob){
-                t1++;
-                System.out.print("F1 ");
                 champTimeF1++;
                 
             }else{
-                t2++;
-                System.out.print("F2 ");
                 champTimeF2++;
             }
         }
