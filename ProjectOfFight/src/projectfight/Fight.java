@@ -27,39 +27,47 @@ public class Fight{
             System.out.println("\n--The challenged--");
             challenged.introduce();
             
-            winner(challenger, challenged);
-
-            Random ran = new Random();
-            int champ = ran.nextInt(3);
-            
-            switch(champ){
-                case 0 -> {
-                    System.out.println("\nIT'S A TIE!\n");
-                    getChallenger().tieFight();
-                    getChallenged().tieFight();
-                }
-                case 1 -> {//challenged won
-                    System.out.println("\nWE HAS A CHAMP -- " + getChallenged().getName() + "!\n");
-                    getChallenged().winFight();
-                    getChallenger().loseFight();
-                }
-                case 2 -> {//challenger won 
-                    System.out.println("\nWE HAS A CHAMP -- " + getChallenger().getName() + "!\n");
-                    getChallenger().winFight();
-                    getChallenged().loseFight();
-                }
-            }
+            System.out.println("WE HAS A CHAMP --" + winner(challenger, challenged) + "--");
             
         }else{
             System.out.println("The fight cannot happen...");
         }
     }
 
-    private Fighter winner(Fighter f1, Fighter f2){
-        if(f1.getAge() > f2.getAge()){
+    private String winner(Fighter f1, Fighter f2){
+        Random ran = new Random();
+        int prob1 = 0, prob2 = 0, luck;
 
+        if(f1.getAge() > f2.getAge()){
+            prob1+=10;
+
+        }else if(f1.getAge() < f2.getAge()){
+            prob2+=10;
         }
-        return champ;
+
+        if(f1.getHeight() > f2.getHeight()){
+            prob1+=10;
+
+        }else if(f1.getHeight() < f2.getHeight()){
+            prob2+=10;
+        }
+
+        if(f1.getWeight() > f2.getWeight()){
+            prob1+=10;
+
+        }else if(f1.getWeight() < f2.getHeight()){
+            prob2+=10;
+        }
+
+        luck = ran.nextInt(101);
+
+        if(prob1 > prob2 && luck <= prob1){
+            champ = f1;
+        }else{
+            champ = f2;
+        }
+
+        return champ.getName();
     }
 
     public Fighter getChallenger(){
