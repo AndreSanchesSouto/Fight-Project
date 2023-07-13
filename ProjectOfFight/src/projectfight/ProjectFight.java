@@ -7,7 +7,7 @@ public class ProjectFight{
         int fights = 4;
                 
         Fighter f[] = new Fighter[fighters];
-        
+        //cadastro dos lutadores
         f[0] = new Fighter("Pretty Boy", "France", 31, 11, 3, 1, 1.75f, 68.9f);
         
         f[1] = new Fighter("Putscript", "Brazil", 29, 14, 2, 3, 1.68f, 57.8f);
@@ -24,7 +24,7 @@ public class ProjectFight{
         
         
         Fight UCC[] = new Fight[fights];
-        
+        //marcar as lutas e os lutadores
         UCC[0] = new Fight();
         UCC[0].markFight(f[0], f[1]);
         UCC[0].setRounds(10);
