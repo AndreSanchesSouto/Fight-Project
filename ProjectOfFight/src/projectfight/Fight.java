@@ -22,7 +22,8 @@ public class Fight{
     
     public void fight(){
         if(getApproved()){
-            System.out.println("\n\\\\\\\\\\ FOR OUR " + getCont() +"st BATTLE WE HAS /////");
+            System.out.println( "FOR OUR " + getCont() +"st BATTLE WE HAS");
+            System.out.println("\\\\\\\\\\ " + challenger.getName() + " vs " + challenged.getName() + " /////");
             System.out.println("\n--The challenger--");
             challenger.introduce();
             System.out.println("\n--The challenged--");
