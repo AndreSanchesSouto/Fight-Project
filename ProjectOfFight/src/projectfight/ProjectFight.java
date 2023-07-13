@@ -3,8 +3,7 @@ package projectfight;
 public class ProjectFight{
 
     public static void main(String[] args){
-        int fighters = 7;
-        int fights = 4;
+        int fighters = 7, fights = 4;
                 
         Fighter f[] = new Fighter[fighters];
         //cadastro dos lutadores
