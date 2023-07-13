@@ -27,14 +27,14 @@ public class ProjectFight{
         
         UCC[0] = new Fight();
         UCC[0].markFight(f[0], f[1]);
-        UCC[0].setRounds(100);
+        UCC[0].setRounds(10);
         UCC[0].fight();
         f[0].status();
         f[1].status();
         
         UCC[1] = new Fight();
         UCC[1].markFight(f[2], f[3]);
-        UCC[1].setRounds(7);
+        UCC[1].setRounds(5);
         UCC[1].fight();
         f[2].status();
         f[3].status();
@@ -47,7 +47,7 @@ public class ProjectFight{
         
         UCC[3] = new Fight();
         UCC[3].markFight(f[5], f[6]);
-        UCC[3].setRounds(5000);
+        UCC[3].setRounds(3);
         UCC[3].fight();
         f[5].status();
         f[6].status();

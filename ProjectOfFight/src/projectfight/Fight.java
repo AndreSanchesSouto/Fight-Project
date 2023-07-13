@@ -37,7 +37,9 @@ public class Fight{
     private String winner(Fighter f1, Fighter f2){
         Random ran = new Random();
         
-        int champTimeF1=0, champTimeF2=0;
+        int champTimeF1=0, champTimeF2=0, time=0;
+        
+        System.out.println("\n===Battle===");
         
         for(int n=0; n<getRounds(); n++){
             int prob = 50, luck;
@@ -64,15 +66,20 @@ public class Fight{
             }
           
             luck = ran.nextInt(101);
-          
+            time++;
+            
             if(luck<=prob){
                 champTimeF1++;
-                
+                System.out.println(time + "st round: "+ f1.getName() +" won!");
             }else{
                 champTimeF2++;
+                System.out.println(time + "st round: " + f2.getName() + " won!");
             }
         }
-        System.out.println("\n1:"+champTimeF1+"\n2:"+champTimeF2+"\n");
+        
+        System.out.println("============\n");
+        System.out.println("The challenger: " + f1.getName() + " got " + champTimeF1 + " victories");
+        System.out.println("The challenged: " + f2.getName() + " got " + champTimeF2 + " victories");
         if(champTimeF1>champTimeF2){
              champ = f1;
              f1.setVictories(f1.getVictories()+1);

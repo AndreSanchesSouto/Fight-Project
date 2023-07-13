@@ -40,11 +40,11 @@ public class Fighter{
     }
     
     public void status(){
-        System.out.println(getName());
-        System.out.println("Height: " + getCategory());
-        System.out.println("Victories: " + getVictories());
-        System.out.println("Defeats: " + getDefeats());
-        System.out.println("Ties: " + getTies());
+        System.out.println("Staus: " + getName());
+        System.out.print("Height: " + getCategory());
+        System.out.print(" | Victories: " + getVictories());
+        System.out.print(" | Defeats: " + getDefeats());
+        System.out.println(" | Ties: " + getTies() + "\n");
     }
     
     public String getName(){
