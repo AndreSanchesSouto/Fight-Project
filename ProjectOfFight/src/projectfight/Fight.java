@@ -22,7 +22,6 @@ public class Fight{
     
     public void fight(){
         if(getApproved()){
-            fig++;
             System.out.println("\n--The challenger--");
             challenger.introduce();
             System.out.println("\n--The challenged--");
