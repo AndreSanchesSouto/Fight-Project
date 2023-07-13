@@ -1,6 +1,13 @@
 package projectfight;
 
 public class ProjectFight{
+    
+    private static int c=0;
+    
+    public static int counter(){
+        c++;
+        return c;
+    }
 
     public static void main(String[] args){
         int fighters = 7, fights = 4;

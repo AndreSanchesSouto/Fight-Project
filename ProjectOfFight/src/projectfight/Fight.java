@@ -22,6 +22,7 @@ public class Fight{
     
     public void fight(){
         if(getApproved()){
+            System.out.println("\n\\\\\\\\\\ FOR OUR " + getCont() +"st BATTLE WE HAS /////");
             System.out.println("\n--The challenger--");
             challenger.introduce();
             System.out.println("\n--The challenged--");
@@ -90,6 +91,10 @@ public class Fight{
             f1.setDefeats(f1.getDefeats()+1);
         }
         return champ.getName();
+    }
+    
+    public int getCont(){
+        return ProjectFight.counter();
     }
     
     public Fight(){
