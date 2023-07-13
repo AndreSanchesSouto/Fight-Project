@@ -1,7 +1,7 @@
 # Fight-Project
-## Here have a program that use the concept of OOP in Java. 
-Some details:
-   1. Is's one of my first projects using the concepts of OOP;
-   2. I've used to program it the IDE NetBeans 17 with Java version 20;
-   3. I'm new here and still studing about Programming and Git / GitHub.
+## Um programa que usa os conceitos de POO (Programação Orientada a Objeto) 
+Alguns detalhes:
+   1. Esse é um dos meus primeiros projetos em Java que usa os conceitos de POO;
+   2. Usei a IDE NetBens 17 com o JDK 20;
+   3. Sou novo tanto em Git / GitHub, mas sigo estudando;
 
