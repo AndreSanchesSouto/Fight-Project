@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Fight{
     private Fighter challenger, challenged, champ;
-    private int rounds;
+    private int rounds, fig=0;
     private boolean approved;
     
     public void markFight(Fighter f1, Fighter f2){
@@ -22,6 +22,7 @@ public class Fight{
     
     public void fight(){
         if(getApproved()){
+            fig++;
             System.out.println("\n--The challenger--");
             challenger.introduce();
             System.out.println("\n--The challenged--");
