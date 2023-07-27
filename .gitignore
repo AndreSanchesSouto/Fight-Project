@@ -28,3 +28,4 @@ ProjectOfFight/build/classes/.netbeans_update_resources
 *.properties
 ProjectOfFight/manifest.mf
 /ProjectOfFight/build/
+/ProjectOfFight/dist/
